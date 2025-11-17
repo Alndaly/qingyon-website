@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-	title: '清韵科技',
-	description: '清韵科技，致力于让所有人的生活更加美好。',
+	title: '青庸科技',
+	description: '青庸科技，致力于让所有人的生活更加美好。',
 };
 
 export default function RootLayout({

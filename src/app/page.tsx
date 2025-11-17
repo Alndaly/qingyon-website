@@ -75,10 +75,10 @@ export default function Home() {
 								Recent Blogs
 							</h2>
 							<Link
-								href={'https://revornix.com/en/blogs/v0.3.0'}
+								href={'https://revornix.com/en/blogs/v0.5.0'}
 								target='_blank'
 								className='text-[14px] leading-[20px] text-[#1a2b3b] font-normal'>
-								The v0.3.0-beta iteration has finally ended, and we welcome the
+								The v0.5.0 iteration has finally ended, and we welcome the
 								official release.
 							</Link>
 						</div>
@@ -191,7 +191,7 @@ export default function Home() {
 					className='z-50 fixed top-0 right-[-2px] w-[80%] md:w-1/2 h-screen bg-[#c3e4ff]'></motion.canvas>
 				<div className='h-fit bg-[#1D2B3A] fixed bottom-0 z-20 w-full flex flex-row items-center justify-evenly'>
 					<div className='text-center text-white/80 whitespace-nowrap flex flex-col space-y-2 p-2 font-mono'>
-						<p>Copyright Qingyun Technology Co Ltd. © 2024</p>
+						<p>Copyright Qingyon Technology Co Ltd. © 2025</p>
 						<Link
 							href='https://beian.miit.gov.cn/'
 							target='_blank'
