@@ -75,10 +75,10 @@ export default function Home() {
 								Recent Blogs
 							</h2>
 							<Link
-								href={'https://revornix.com/en/blogs/v0.5.0'}
+								href={'https://revornix.com/en/blogs/v0.8.0'}
 								target='_blank'
 								className='text-[14px] leading-[20px] text-[#1a2b3b] font-normal'>
-								The v0.5.0 iteration has finally ended, and we welcome the
+								The v0.8.0 iteration has finally ended, and we welcome the
 								official release.
 							</Link>
 						</div>
