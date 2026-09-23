@@ -12,6 +12,29 @@ export const company = {
 	city: '中国 · 杭州',
 };
 
+// 联系方式（与创始人个人站 kinda.info 保持一致）
+export const contact = {
+	founder: '七月 Kinda',
+	wechat: {
+		label: '创始人微信',
+		qr: '/images/wechat-qr.jpg',
+		hint: '扫码添加，附一句来意即可',
+	},
+	official: {
+		label: '微信公众号',
+		name: '七月文',
+		qr: '/images/wechat-official-qr.jpg',
+		hint: '产品更新与 AI 落地实践',
+	},
+	socials: [
+		{ label: 'GitHub', handle: 'Qingyon-AI', href: 'https://github.com/Qingyon-AI' },
+		{ label: '创始人 GitHub', handle: 'Alndaly', href: 'https://github.com/Alndaly' },
+		{ label: '哔哩哔哩', handle: '七月', href: 'https://space.bilibili.com/391938956' },
+		{ label: '小红书', handle: '七月', href: 'https://xhslink.cn/m/2gpKCIOPcgc' },
+		{ label: '个人站', handle: 'kinda.info', href: 'https://kinda.info' },
+	],
+};
+
 export const nav = [
 	{ label: '产品', href: '#products' },
 	{ label: '服务', href: '#services' },
