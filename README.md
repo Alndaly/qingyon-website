@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 青庸科技官网 · qingyon.com
 
-## Getting Started
+青庸科技（杭州）有限公司官网，Next.js 16 + Tailwind CSS + Framer Motion。
 
-First, run the development server:
+## 开发
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx next dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 修改内容
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+所有文案与数据（产品、服务、案例、数据指标、联系方式、备案号）集中在
+[`src/content/site.ts`](src/content/site.ts)，修改内容无需改动组件。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 结构
 
-## Learn More
+- `src/components/hero.tsx` — 首屏与智能体运行控制台动画（`agent-console.tsx`）
+- `src/components/products.tsx` — 产品：Revornix / WeSmile / Mosael（插画在 `product-visuals.tsx`）
+- `src/components/services.tsx` — FDE 前线部署工程 / 企业 AI 陪跑
+- `src/components/cases.tsx` — 智能体交付案例
+- `src/components/process.tsx` — 合作流程与关于（OPC）
+- `src/components/contact.tsx` — 联系与页脚
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+设计令牌（颜色）定义在 `src/app/globals.css` 的 `:root`，以 RGB 通道形式供 Tailwind 透明度修饰符使用。
