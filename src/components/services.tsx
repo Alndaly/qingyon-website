@@ -25,7 +25,7 @@ export function Services() {
 				<div className='mt-16 grid gap-5 lg:grid-cols-2'>
 					{services.map((s, i) => (
 						<Reveal key={s.key} delay={i * 0.1} className='h-full'>
-							<article className='relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.035] p-7 backdrop-blur md:p-10'>
+							<article className='relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.035] p-7 backdrop-blur-sm md:p-10'>
 								<div className='flex items-start justify-between gap-6'>
 									<div>
 										<span className='font-mono text-[11px] uppercase tracking-[0.16em] text-[#8fd6c6]'>

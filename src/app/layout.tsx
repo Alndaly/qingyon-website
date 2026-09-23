@@ -5,17 +5,17 @@ import './globals.css';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
-	variable: '--font-sans',
+	variable: '--font-geist',
 	weight: '100 900',
 });
 const geistMono = localFont({
 	src: './fonts/GeistMonoVF.woff',
-	variable: '--font-mono',
+	variable: '--font-geist-mono',
 	weight: '100 900',
 });
 const serif = Noto_Serif_SC({
 	weight: ['500', '700', '900'],
-	variable: '--font-serif',
+	variable: '--font-noto-serif',
 	display: 'swap',
 	preload: false,
 });

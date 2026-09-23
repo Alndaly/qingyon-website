@@ -1,11 +1,11 @@
 # 青庸科技官网 · qingyon.com
 
-青庸科技（杭州）有限公司官网，Next.js 16 + Tailwind CSS + Framer Motion。
+青庸科技（杭州）有限公司官网，Next.js 16 + React 19 + Tailwind CSS 4 + Framer Motion，包管理器 pnpm 12（见 `package.json#packageManager`）。
 
 ## 开发
 
 ```bash
-npx next dev
+pnpm dev
 ```
 
 ## 修改内容
@@ -22,4 +22,4 @@ npx next dev
 - `src/components/process.tsx` — 合作流程与关于（OPC）
 - `src/components/contact.tsx` — 联系与页脚
 
-设计令牌（颜色）定义在 `src/app/globals.css` 的 `:root`，以 RGB 通道形式供 Tailwind 透明度修饰符使用。
+设计令牌（颜色、字体、版心宽度）定义在 `src/app/globals.css` 的 `@theme` 中（Tailwind v4，无 tailwind.config）。

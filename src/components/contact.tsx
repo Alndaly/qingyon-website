@@ -28,7 +28,7 @@ export function Contact() {
 					<div className='grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16'>
 						<div>
 							<Reveal>
-								<span className='eyebrow !text-white/60 before:!bg-white'>Contact · 开始合作</span>
+								<span className='eyebrow text-white/60! before:bg-white!'>Contact · 开始合作</span>
 								<h2 className='mt-6 font-serif text-[36px] font-black leading-[1.18] md:text-[56px]'>
 									聊聊你的业务，
 									<br />
@@ -65,7 +65,7 @@ export function Contact() {
 								{[{ ...contact.wechat, name: '' }, contact.official].map((c) => (
 									<figure
 										key={c.label}
-										className='rounded-[22px] border border-white/15 bg-white/[0.07] p-3 backdrop-blur sm:p-4'>
+										className='rounded-[22px] border border-white/15 bg-white/[0.07] p-3 backdrop-blur-sm sm:p-4'>
 										<div className='overflow-hidden rounded-2xl bg-white p-3'>
 											{/* eslint-disable-next-line @next/next/no-img-element */}
 											<img

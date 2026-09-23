@@ -23,7 +23,7 @@ export function SectionHead({
 	return (
 		<div className='grid gap-6 md:grid-cols-[1fr_0.8fr] md:items-end'>
 			<Reveal>
-				<span className={`eyebrow ${light ? '!text-white/50' : ''}`}>{eyebrow}</span>
+				<span className={`eyebrow ${light ? 'text-white/50!' : ''}`}>{eyebrow}</span>
 				<h2
 					className={`mt-5 font-serif text-[34px] font-black leading-[1.2] tracking-[-0.01em] md:text-[48px] ${
 						light ? 'text-white' : 'text-ink'
@@ -61,7 +61,7 @@ export function Products() {
 						const Visual = visuals[p.key];
 						return (
 							<Reveal key={p.key} delay={0.05}>
-								<article className='group grid overflow-hidden rounded-[28px] border border-line bg-white/55 p-3 shadow-[0_1px_0_rgba(255,255,255,0.8)_inset] backdrop-blur transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(17,22,21,0.25)] md:grid-cols-2 md:p-4'>
+								<article className='group grid overflow-hidden rounded-[28px] border border-line bg-white/55 p-3 shadow-[0_1px_0_rgba(255,255,255,0.8)_inset] backdrop-blur-sm transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(17,22,21,0.25)] md:grid-cols-2 md:p-4'>
 									<div
 										className={`flex flex-col justify-between gap-10 p-5 md:p-8 ${
 											i % 2 === 1 ? 'md:order-2' : ''

@@ -13,7 +13,7 @@ export function Process() {
 				/>
 
 				<div className='relative mt-16 grid gap-10 md:grid-cols-4 md:gap-6'>
-					<div className='absolute left-0 right-0 top-[22px] hidden h-px bg-gradient-to-r from-qing via-qing/40 to-transparent md:block' />
+					<div className='absolute left-0 right-0 top-[22px] hidden h-px bg-linear-to-r from-qing via-qing/40 to-transparent md:block' />
 					{process.map((p, i) => (
 						<Reveal key={p.step} delay={i * 0.1}>
 							<div className='relative'>

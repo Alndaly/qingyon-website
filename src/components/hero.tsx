@@ -35,7 +35,7 @@ export function Hero() {
 			<div className='container-site relative grid gap-14 pb-16 pt-14 md:pt-24 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12 lg:pb-24'>
 				<div className='flex flex-col justify-center'>
 					<motion.div {...rise(0.05)} className='flex flex-wrap items-center gap-2'>
-						<span className='inline-flex items-center gap-2 rounded-full border border-line bg-white/60 py-1 pl-1 pr-3 text-[12px] text-ink-2 backdrop-blur'>
+						<span className='inline-flex items-center gap-2 rounded-full border border-line bg-white/60 py-1 pl-1 pr-3 text-[12px] text-ink-2 backdrop-blur-sm'>
 							<span className='rounded-full bg-qing px-2 py-0.5 font-mono text-[10px] font-medium tracking-wider text-white'>
 								OPC
 							</span>
@@ -94,7 +94,7 @@ export function Hero() {
 						</a>
 						<a
 							href='#cases'
-							className='inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/50 px-6 py-3.5 text-[14px] font-medium text-ink backdrop-blur transition-colors hover:bg-white'>
+							className='inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/50 px-6 py-3.5 text-[14px] font-medium text-ink backdrop-blur-sm transition-colors hover:bg-white'>
 							查看智能体交付案例
 						</a>
 					</motion.div>
@@ -105,7 +105,7 @@ export function Hero() {
 					animate={{ opacity: 1, y: 0, rotate: 0 }}
 					transition={{ duration: 1.2, delay: 0.3, ease }}
 					className='relative lg:mt-6'>
-					<div className='absolute -inset-3 rounded-[30px] border border-line bg-white/30 backdrop-blur-sm' />
+					<div className='absolute -inset-3 rounded-[30px] border border-line bg-white/30 backdrop-blur-xs' />
 					<div className='relative'>
 						<AgentConsole />
 					</div>

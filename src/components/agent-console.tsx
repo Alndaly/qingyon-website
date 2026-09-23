@@ -108,7 +108,7 @@ export function AgentConsole() {
 			{/* 进度 */}
 			<div className='mx-5 h-[3px] overflow-hidden rounded-full bg-white/[0.06]'>
 				<motion.div
-					className='h-full rounded-full bg-gradient-to-r from-[#3fa391] to-[#8fd6c6]'
+					className='h-full rounded-full bg-linear-to-r from-[#3fa391] to-[#8fd6c6]'
 					animate={{ width: `${(count / script.lines.length) * 100}%` }}
 					transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
 				/>
@@ -133,7 +133,7 @@ export function AgentConsole() {
 							) : line.tone === 'ok' ? (
 								<>
 									<span className='text-[#8fd6c6]'>✓</span>
-									<span className='rounded bg-[#3fa391]/15 px-1.5 text-[#8fd6c6]'>{line.text}</span>
+									<span className='rounded-sm bg-[#3fa391]/15 px-1.5 text-[#8fd6c6]'>{line.text}</span>
 								</>
 							) : (
 								<>

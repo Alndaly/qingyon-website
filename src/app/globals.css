@@ -1,20 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-	/* RGB 通道形式，便于 Tailwind 透明度修饰符（如 bg-paper/80） */
-	--paper: 245 243 236;
-	--paper-2: 235 232 222;
-	--ink: 17 22 21;
-	--ink-2: 75 84 82;
-	--ink-3: 138 145 142;
-	--qing: 29 107 98;
-	--qing-2: 63 163 145;
-	--qing-soft: 217 233 226;
-	--seal: 184 65 44;
-	--night: 12 18 17;
-	--line: rgb(17 22 21 / 0.1);
+/* 设计令牌：Tailwind v4 通过 @theme 生成 bg-paper / text-ink / max-w-site 等工具类 */
+@theme {
+	--color-paper: rgb(245 243 236);
+	--color-paper-2: rgb(235 232 222);
+	--color-ink: rgb(17 22 21);
+	--color-ink-2: rgb(75 84 82);
+	--color-ink-3: rgb(138 145 142);
+	--color-line: rgb(17 22 21 / 0.1);
+	--color-qing: rgb(29 107 98);
+	--color-qing-2: rgb(63 163 145);
+	--color-qing-soft: rgb(217 233 226);
+	--color-seal: rgb(184 65 44);
+	--color-night: rgb(12 18 17);
+
+	--container-site: 1240px;
+}
+
+/* next/font 的变量挂在 <body> 上，inline 让工具类在元素处直接解析 */
+@theme inline {
+	--font-sans: var(--font-geist), 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	--font-serif: var(--font-noto-serif), 'Songti SC', 'STSong', serif;
+	--font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 html {
@@ -23,30 +30,27 @@ html {
 }
 
 body {
-	background: rgb(var(--paper));
-	color: rgb(var(--ink));
+	background: var(--color-paper);
+	color: var(--color-ink);
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
 
 ::selection {
-	background: rgb(var(--qing));
+	background: var(--color-qing);
 	color: #fff;
 }
 
-@layer components {
-	.container-site {
-		@apply mx-auto w-full max-w-site px-5 md:px-10;
-	}
-	.eyebrow {
-		@apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3;
-	}
-	.eyebrow::before {
+@utility container-site {
+	@apply mx-auto w-full max-w-site px-5 md:px-10;
+}
+
+@utility eyebrow {
+	@apply inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.18em] text-ink-3 uppercase;
+
+	&::before {
 		content: '';
 		@apply block h-[6px] w-[6px] rounded-full bg-qing;
-	}
-	.hairline {
-		@apply border-line;
 	}
 }
 
@@ -62,8 +66,8 @@ body {
 }
 
 .grid-lines {
-	background-image: linear-gradient(to right, var(--line) 1px, transparent 1px),
-		linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+	background-image: linear-gradient(to right, var(--color-line) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--color-line) 1px, transparent 1px);
 	background-size: 64px 64px;
 }
 

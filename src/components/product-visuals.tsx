@@ -44,7 +44,7 @@ export function RevornixVisual() {
 							<span className='relative'>✦ {n.label}</span>
 						</div>
 					) : n.label ? (
-						<div className='rounded-full border border-white/15 bg-white/5 px-2.5 py-1 font-mono text-[10.5px] text-white/70 backdrop-blur'>
+						<div className='rounded-full border border-white/15 bg-white/5 px-2.5 py-1 font-mono text-[10.5px] text-white/70 backdrop-blur-sm'>
 							{n.label}
 						</div>
 					) : (
@@ -52,7 +52,7 @@ export function RevornixVisual() {
 					)}
 				</div>
 			))}
-			<div className='absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2.5 backdrop-blur'>
+			<div className='absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2.5 backdrop-blur-sm'>
 				<span className='font-mono text-[10.5px] text-white/50'>GraphRAG · 214 entities</span>
 				<span className='font-mono text-[10.5px] text-[#8fd6c6]'>MCP connected</span>
 			</div>
@@ -67,7 +67,7 @@ export function WeSmileVisual() {
 		{ tag: '二手', color: 'bg-[#e4e1f5] text-[#4d4596]', text: '九成新考研资料一套，校内自取', meta: '¥ 45 · 东区' },
 	];
 	return (
-		<div className='relative flex h-full min-h-[340px] w-full items-center justify-center overflow-hidden rounded-[20px] bg-gradient-to-br from-[#f3efe4] to-[#e3ede7]'>
+		<div className='relative flex h-full min-h-[340px] w-full items-center justify-center overflow-hidden rounded-[20px] bg-linear-to-br from-[#f3efe4] to-[#e3ede7]'>
 			<div className='absolute left-1/2 top-1/2 h-[260px] w-[260px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/70 blur-3xl' />
 			<div className='relative w-[228px] rotate-[-3deg] rounded-[34px] border-[6px] border-ink bg-paper p-3 shadow-[0_30px_60px_-20px_rgba(17,22,21,0.4)]'>
 				<div className='mx-auto mb-3 h-[18px] w-[70px] rounded-full bg-ink' />
@@ -112,16 +112,16 @@ export function MosaelVisual() {
 		<div className='relative flex h-full min-h-[340px] w-full flex-col overflow-hidden rounded-[20px] bg-[#16181c] p-4'>
 			{/* 预览窗口 + 无限画布 */}
 			<div className='grid flex-1 grid-cols-[1fr_0.8fr] gap-3'>
-				<div className='relative overflow-hidden rounded-xl bg-gradient-to-br from-[#2c3e63] via-[#5a4a6e] to-[#d98f6b]'>
-					<div className='absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/50 to-transparent' />
+				<div className='relative overflow-hidden rounded-xl bg-linear-to-br from-[#2c3e63] via-[#5a4a6e] to-[#d98f6b]'>
+					<div className='absolute bottom-0 left-0 right-0 h-1/2 bg-linear-to-t from-black/50 to-transparent' />
 					<div className='absolute bottom-[30%] left-[18%] h-10 w-10 rounded-full bg-[#ffd9a8]/90 blur-[2px]' />
 					<div className='absolute bottom-0 left-0 right-0 h-[28%] bg-[#1b2336] [clip-path:polygon(0_60%,20%_20%,38%_55%,58%_10%,80%_50%,100%_25%,100%_100%,0_100%)]' />
 					<p className='absolute bottom-2 left-0 right-0 text-center text-[10px] text-white/90'>每个想法，都有自己的时间线</p>
-					<span className='absolute left-2 top-2 rounded bg-black/40 px-1.5 py-0.5 font-mono text-[9px] text-white/70'>00:00:12:08</span>
+					<span className='absolute left-2 top-2 rounded-sm bg-black/40 px-1.5 py-0.5 font-mono text-[9px] text-white/70'>00:00:12:08</span>
 				</div>
 				<div className='relative overflow-hidden rounded-xl border border-white/[0.06] bg-[#1d2025] [background-image:radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:12px_12px]'>
-					<div className='absolute left-[10%] top-[12%] h-[34%] w-[46%] rotate-[-4deg] rounded-md bg-gradient-to-br from-[#5a4a6e] to-[#d98f6b]' />
-					<div className='absolute right-[8%] top-[24%] rounded-md bg-[#fef3c7] px-2 py-1.5 text-[9px] text-[#78551b] shadow'>分镜 03 · 日落</div>
+					<div className='absolute left-[10%] top-[12%] h-[34%] w-[46%] rotate-[-4deg] rounded-md bg-linear-to-br from-[#5a4a6e] to-[#d98f6b]' />
+					<div className='absolute right-[8%] top-[24%] rounded-md bg-[#fef3c7] px-2 py-1.5 text-[9px] text-[#78551b] shadow-sm'>分镜 03 · 日落</div>
 					<div className='absolute bottom-[12%] left-[14%] right-[12%] rounded-md border border-[#8fd6c6]/30 bg-[#8fd6c6]/10 px-2 py-1.5 font-mono text-[9px] text-[#8fd6c6]'>
 						Agent › 为 3 个镜头生成字幕
 					</div>
@@ -138,7 +138,7 @@ export function MosaelVisual() {
 				{tracks.map((t) => (
 					<div key={t.name} className='flex items-center gap-2'>
 						<span className='w-5 font-mono text-[9px] text-white/35'>{t.name}</span>
-						<div className='relative h-5 flex-1 rounded bg-white/[0.03]'>
+						<div className='relative h-5 flex-1 rounded-sm bg-white/[0.03]'>
 							{t.clips.map(([a, b, c], i) => (
 								<div
 									key={i}
@@ -153,7 +153,7 @@ export function MosaelVisual() {
 					</div>
 				))}
 				<div className='pointer-events-none absolute bottom-2 top-6 w-px bg-[#ff6b5a] [animation:playhead_8s_linear_infinite_alternate]'>
-					<span className='absolute -left-[3px] -top-1 h-2 w-[7px] rounded-sm bg-[#ff6b5a]' />
+					<span className='absolute -left-[3px] -top-1 h-2 w-[7px] rounded-xs bg-[#ff6b5a]' />
 				</div>
 			</div>
 		</div>
